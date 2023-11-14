@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog - Método Gauss-Seidel</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+  <header>
+    <h1 id="titulo">Método Gauss-Seidel</h1>
+  </header>
+  <section id="contenido">
+    <h2>Introducción al Método Gauss-Seidel</h2>
+    <p>El método de Gauss-Seidel es un método iterativo utilizado para resolver sistemas de ecuaciones lineales. El método se llama así en honor a los matemáticos alemanes Carl Friedrich Gauss y Philipp Ludwig von Seidel, que lo desarrollaron en el siglo XIX. El método se basa en despejar una variable en cada ecuación e ir sustituyendo los valores aproximados obtenidos en las siguientes ecuaciones, hasta alcanzar un nivel de precisión deseado.
+      El método de Gauss-Seidel tiene varias aplicaciones en el ámbito de la ingeniería, la física, la química y otras ciencias que requieren resolver sistemas de ecuaciones lineales de gran tamaño. Algunas de las ventajas de este método son:<br>
+       <br> <li>fácil de implementar y programar en ordenador</li>
+       <li>Converge rápidamente si la matriz de coeficientes es diagonalmente
+        dominate o si es simética y definida postiva</li></br>
+        <br>El método de Gauss Seidel es un algoritmo utilizando para resolver sistemas de ecuaciones lineales. Se basa en la idea de descomponer el sistema
+      en una serie de ecuaciones más simples y resolveras de forma iterativa hasta obtener una solución aproximada. El proceso comienza con una estimación inicial 
+    de las variables de sistemas. Luego, se utilizan las ecuaciones del sistema para actualizar las estimaciones de las variables en cada iteración. Este proceso
+  se repite hasta que las estimaciones converjan a una solución aceptables.</br>
+       </p>
+    <h2>Pasos de resolución</h2>
+    <div>
+      <img src="Ejemplo1.jpg" alt="Metodo Gauss-Seidel" width="300px" height="120px">
+     <br> <p>Partiendo de X0= (1,2,3,4)</p>
+     <p>solución</br>
+     <br><p>Iteración 1</br></p>
+     <img src="Iteración1.jpg" alt="Metodo Gauss-Seidel" width="350px" height="400px">
+     <br>Interación 2</br>
+     <img src="Iteración2.jpg" alt="Metodo Gauss-Seidel" width="350px" height="400px">
+    </div>
+    <h2>Fórmulas utilizadas</h2>
+    <p>Descripción de las fórmulas utilizadas y su significado:</p>
+    <p>El método de Gauss-Seidel es un método iterativo para resolver sistemas de ecuaciones lineales con una precisión arbitraria. 
+      El método se aplica a matrices cuadradas con elementos no nulos en sus diagonales y la convergencia se garantiza si la matriz es diagonalmente dominante o si es simétrica y definida positiva. 
+      La fórmula del método de Gauss-Seidel es la siguiente:</p>
+    <ul>
+      <li>Fórmula:<span class="formula"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msubsup><mi>x</mi><mi>i</mi><mrow><mo stretchy="false">(</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msubsup><mo>=</mo><mfrac><mn>1</mn><msub><mi>a</mi><mrow><mi>i</mi><mi>i</mi></mrow></msub></mfrac><mrow><mo fence="true">(</mo><msub><mi>b</mi><mi>i</mi></msub><mo>−</mo><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn></mrow></munderover><msub><mi>a</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msubsup><mi>x</mi><mi>j</mi><mrow><mo stretchy="false">(</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msubsup><mo>−</mo><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mi>i</mi><mo>+</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>a</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msubsup><mi>x</mi><mi>j</mi><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></msubsup><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">x_i^{(k+1)} = \frac{1}{a_{ii}} \left( b_i - \sum_{j=1}^{i-1} a_{ij} x_j^{(k+1)} - \sum_{j=i+1}^{n} a_{ij} x_j^{(k)} \right)
+      </annotation></semantics></math></span></li> </ul>
+      <p>donde xi(k)​ es la aproximación de la variable xi​ en la iteración k, aij​ son los coeficientes de la matriz del sistema, y bi​ son los términos independientes.
+       El método consiste en partir de una aproximación inicial x(0) y calcular las siguientes aproximaciones usando la fórmula anterior, hasta que se alcance un criterio de convergencia, que puede ser un error máximo o un número de iteraciones.</p>
+
+       <h3>Método de Gauss-Seidel</h3>
+       <p>El método de Gauss-Seidel es una variante del método de Jacobi. El objectivo del metodo es encontrarvalores de las variables
+        de un sistema de ecuaciones lineales (matrices), mediante una serie de cálculos por etapas; donde en cada etapa se encuentran 
+        los respectivo valores aproximados. En general los métodos iterativos funcionan como el método de 
+        punto fijo y tienen error de trucamineto.<br>
+
+       
+        
+        <br>El método de Gauss-Seidel se diferencia al método de Jacobi, donde los valores actualizados de Xi sustituyen de inmediato a los valores anteriores y son los que se utilizan para hallar los nuevos valores, debido a esto el método se desarrolla en orden y uno a uno.
+        El método consiste; en que dado el sistema de ecuaciones, se debe de espejar de cada ecuacion la variable Xi, luego de tener el despeje en cada ecucion se deben dar valores iniciales para cada Xi de manera arbitraria y ya se procede a realizar las diferentes interaciones respectivas,
+        de la siguiente forma:<br>
+        <br>1. Hallamos X1 con la ecuación (1) y los valores iniciales de X2 y X3<br>
+        2. Hallamos X2 con la ecuación (2) y el nuevo valor de X1 y el valor inicial de X3<br>
+        3. Hallamos X3 con la ecuación (3) y los nuevos valores de X1 y X2<br>
+
+        <br>Para las siguiente iteraciones:<br>
+        1. Hallamos X1 con la ecuación (1) y los valores anteriores de X2 y X3<br>
+        2. Hallamos X2 con la ecuación (2) y el valor nuevo de X1 y el valor anterior de X3<br>
+        3. Hallamos X3 con la ecuación (3) y los valores nuevos de X1 y X2<br>
+        <p>El método se detiene cuando sobrepasa el numero de interaciones propuestas o cuando el error es menor al error ingresado por el usuario.</p>
+       </br></p>
+
+       <hr>
+       <p>Video Tutorial de como realizar un ejercicio del Método-Seidel</p>
+       <iframe width="542" height="330" src="https://www.youtube.com/embed/iRdy1VgOTRk" title="Método de Gauss Seidel. Sistemas de ecuaciones lineales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </hr>
+  </section>
+  <footer>
+    <p>© 2023 Klein Apolinar Lopez Gomez</p>
+  </footer>
+</body>
+</html>
